@@ -17,7 +17,7 @@ lscroll.on('scroll', (obj) => {
     scroll.current = obj.scroll.x;
     const distance = scroll.current - scroll.cache;
     scroll.cache = scroll.current;
-    const skewVal = map(distance, -50, 50, -15, 15);
+    const skewVal = map(distance, -50, 50, -5, 5);
     allImgs.forEach(el => el.style.transform = 'skewX('+clamp(skewVal, -15, 15)+'deg)');
 });
 lscroll.update();
